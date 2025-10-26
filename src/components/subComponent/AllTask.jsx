@@ -29,67 +29,38 @@ function AllTask() {
 
   useEffect(() => {
     fectchAllTask();
-  },[employees]);
+  }, [employees]);
 
   return (
     <div className="alltask-container">
       <h1>Task List</h1>
-      {allTask.length===0? 
-      (<h2>No Task Available</h2>):
-
-       allTask.map((task,index)=>{
-        const colors = ["#FFB6C1","#ADD8E6","#90EE90","#FFD700","#FFA07A","#D8BFD8","#FF69B4"];
-        const randomColor = colors[index];
-        return(
-        <div key={index}  className="task"   style={{ "--task-bg-color": randomColor }} >
-        <h2>{task.assignedTo}</h2>
-        <h3>{task.description}</h3>
-        <h4>{task.status}</h4>
-      </div>
-   
-       )})
-
-      }
-     
-      {/* <div className="task green">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-
-      <div className="task magenta">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-
-      <div className="task blue">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-      <div className="task red">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-      <div className="task green">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-
-      <div className="task magenta">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div>
-
-      <div className="task blue">
-        <h2>Sumit</h2>
-        <h3>make UI design</h3>
-        <h4>Status</h4>
-      </div> */}
+      {allTask.length === 0 ? (
+        <h2>No Task Available</h2>
+      ) : (
+        allTask.map((task, index) => {
+          const colors = [
+            "#FFB6C1",
+            "#ADD8E6",
+            "#90EE90",
+            "#FFD700",
+            "#FFA07A",
+            "#D8BFD8",
+            "#FF69B4",
+          ];
+          const randomColor = colors[index];
+          return (
+            <div
+              key={index}
+              className="task"
+              style={{ "--task-bg-color": randomColor }}
+            >
+              <h2>{task.assignedTo}</h2>
+              <h3>{task.description}</h3>
+              <h4>{task.status}</h4>
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }
