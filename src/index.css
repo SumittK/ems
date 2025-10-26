@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+*{
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  /* background-color: rosybrown; */
+  background-image: url('assets/bg-image.jpg');
+  background-size: cover;    /* make image cover whole screen */
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+}

@@ -1,0 +1,7 @@
+.e-dashboard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 55px;
+    padding-right: 55px;
+}

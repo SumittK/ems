@@ -1,0 +1,41 @@
+.status-card{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);    /* 2 rows */
+    gap: 40px;                               /* space between items */
+    justify-content: center;                 /* center grid horizontally */
+    align-items: center;                     /* center grid vertically */
+    margin-top: 50px;
+
+}
+
+
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    height:100px;
+    
+  }
+
+  .orange {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color:blanchedalmond;
+  }
+  
+  .green {
+    background-color: #2ecc71;
+  }
+  
+  .yellow {
+    background-color: #f1c40f;
+  }

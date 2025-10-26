@@ -1,0 +1,121 @@
+.admindashboard-container{
+    padding:20px 30px;
+}
+
+
+.create-task-container{
+    margin-top: 50px;
+    width:100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+ .input-container{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding: 25px 20px;
+
+
+}
+
+.input-container h3 {
+    margin-bottom: 4px; /* small space between label and input */
+  }
+.input-container input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    margin-bottom: 16px; 
+
+   
+}
+
+.input-container select{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    margin-bottom: 16px; 
+
+   
+}
+.input-container select option{
+    padding:10px;
+    gap: 12px;
+}
+
+.input-container input::placeholder{
+    color:lightgrey;
+    opacity: 1;
+}
+
+.desc-container{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    gap:12px;
+    justify-content: center;
+   
+}
+.desc-container textarea{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    height: 200px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+}
+
+.desc-container button{
+    margin-top:30px;
+    width: 80%;
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+    border : 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.alltask-container{
+    margin-top: 30px;
+    width:100%; 
+    display: flex;
+    flex-direction: column;
+    height:30vh;
+    overflow-y: auto;  
+   
+}
+
+.alltask-container::-webkit-scrollbar{
+    display: none;
+}
+
+.task{
+    margin-top: 5px;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    height:200px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: var(--task-bg-color, aliceblue);
+}
