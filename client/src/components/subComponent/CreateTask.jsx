@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
 function CreateTask() {
-  const { employees } = useContext(AuthContext);
+  const { employees, updateUserData } = useContext(AuthContext);
   const [taskTitle, setTaskTitle] = useState("");
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
@@ -43,7 +43,14 @@ function CreateTask() {
     };
 
     const assignedEmployee = employees.find((emp) => emp.email === assignedTo);
-    assignedEmployee.tasks.push(newTask);
+   // assignedEmployee.tasks.push(newTask);
+    const updatedEmployees = employees.map((emp) =>
+      emp.email === assignedTo
+        ? { ...emp, tasks: [...emp.tasks, newTask] }
+        : emp
+    );
+
+    updateUserData(updatedEmployees);
     localStorage.setItem("employees", JSON.stringify(employees));
     alert("Task created successfully!");
     setAssignedTo("");
@@ -75,7 +82,6 @@ function CreateTask() {
           <select value={assignedTo} onChange={handleChange} required>
             <option value="">Select Employee</option>
 
-           
             {employees &&
               employees.map((emp) => (
                 <option key={emp.id} value={emp.email}>

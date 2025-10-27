@@ -26,9 +26,14 @@ function AuthProvider({ children }) {
     setLoggedInUser(null);
     localStorage.removeItem("loggedInUser");
   };
+
+  const updateUserData = (newUserData) => {
+    setUser( prev=>({...prev, employees: newUserData}));
+    localStorage.setItem("employees", JSON.stringify(newUserData));
+  }
   return (
     <div>
-      <AuthContext.Provider value={{...user ,loggedInUser ,logInUser , logOutUser}}>{children}</AuthContext.Provider>
+      <AuthContext.Provider value={{...user ,loggedInUser ,logInUser , logOutUser , updateUserData}}>{children}</AuthContext.Provider>
     </div>
   );
 }

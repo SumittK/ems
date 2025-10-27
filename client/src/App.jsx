@@ -6,9 +6,9 @@ import { use, useEffect } from "react";
 import { setLocalStorage } from "./utils/localStorage.jsx";
 
 const App = () => {
-  // useEffect(() => {
-  //   setLocalStorage();
-  // }, []);
+  useEffect(() => {
+    setLocalStorage();
+  }, []);
   return (
     <Router>
       <Routes>
